@@ -14,3 +14,6 @@ function fileSafe(input)
 var groupName = document.querySelector('div[role="main"] > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > span[dir="auto"]').innerText.trim();
 var groupNameCleaned = fileSafe(groupName);
 console.log(groupNameCleaned);
+
+var sidePanel = document.querySelectorAll('div[role="main"] > div > div > div > div > div > div')[1];
+sidePanel.style.display;
