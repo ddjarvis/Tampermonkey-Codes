@@ -20,6 +20,8 @@
 // @grant        none
 // ==/UserScript==
 
+// @github	https://github.com/ddjarvis/Tampermonkey-Codes/blob/main/XV/%5BXV%5D%20Search%20Helper.user.js
+
 (function() {
     'use strict';
 
