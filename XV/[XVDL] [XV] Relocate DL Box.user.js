@@ -10,6 +10,8 @@
 // @require      https://cdn.jsdelivr.net/gh/ddjarvis/JS-Snippets@getElement-1.1.0/js-functions/getElement.js
 // ==/UserScript==
 
+// @github	https://github.com/ddjarvis/Tampermonkey-Codes/edit/main/XV/%5BXVDL%5D%20%5BXV%5D%20Relocate%20DL%20Box.user.js
+
 (function() {
     'use strict';
 
