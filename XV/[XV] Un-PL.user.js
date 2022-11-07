@@ -9,6 +9,8 @@
 // @grant        none
 // ==/UserScript==
 
+// @github	https://github.com/ddjarvis/Tampermonkey-Codes/blob/main/XV/%5BXV%5D%20Un-PL.user.js
+
 (function() {
     'use strict';
     function addElement(e="",t="",d="",n="",o=""){t=t||"my"+e.charAt(0).toUpperCase()+e.substr(1).toLowerCase(),"-"==(d=d||"&nbsp;")&&(d=""),n=n||document.body;e=document.createElement(e);return e.id=t,e.appendChild(document.createTextNode(d)),o?n.insertBefore(e,o):n.appendChild(e),document.getElementById(t)}
