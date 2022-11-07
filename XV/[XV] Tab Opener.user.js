@@ -13,6 +13,8 @@
 // @require      https://cdn.jsdelivr.net/gh/ddjarvis/JS-Snippets@addCode-1.0.2/js-functions/addCode.js
 // ==/UserScript==
 
+// @github	https://github.com/ddjarvis/Tampermonkey-Codes/blob/main/XV/%5BXV%5D%20Tab%20Opener.user.js
+
 (function() {
     'use strict';
 
