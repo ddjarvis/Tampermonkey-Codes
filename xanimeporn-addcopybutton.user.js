@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XAnime Copy Button
 // @namespace    http://tampermonkey.net/
-// @version      1.2.1
+// @version      1.2.2
 // @description  try to take over the world!
 // @author       ddjrvs
 // @match        https://www.xanimeporn.com/*
@@ -43,10 +43,15 @@
       });
     }
     
+    function downloadLink() {
+      document.querySelector('a[href*="quality=480p"]').click();
+    }
+    
     function fn_copyButton() {
       scrollDown();
       setTimeout(clickDownload, 600);
-      setTimeout(copyTitle, 1500);
+      setTimeout(copyTitle, 1300);
+      setTimeout(downloadLink, 1500);
     }
     
     function addCopyButton() {
