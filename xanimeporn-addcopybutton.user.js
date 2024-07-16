@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         XAnime Copy Button
 // @namespace    http://tampermonkey.net/
-// @version      2024-07-16
+// @version      1.2.0
 // @description  try to take over the world!
-// @author       You
+// @author       ddjrvs
 // @match        https://www.xanimeporn.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=xanimeporn.com
 // @grant        none
@@ -32,6 +32,23 @@
       copyText(title);
     }
     
+    function clickDownload() {
+      document.querySelector('div.su-tabs-nav span:nth-child(3)').click();
+    }
+    
+    function scrollDown() {
+      window.scrollBy({
+        top: 500,
+        behavior: 'smooth'
+      });
+    }
+    
+    function fn_copyButton() {
+      clickDownload();
+      setTimeout(scrollDown, 1000);
+      setTimeout(copyTitle, 1500);
+    }
+    
     function addCopyButton() {
         // Create a new button element
         const button = document.createElement('button');
@@ -50,7 +67,7 @@
         
         // Set the button's onclick action
         button.onclick = function() {
-            copyTitle();
+            fn_copyButton();
         };
         
         // Append the button to the body (or any other desired parent element)
