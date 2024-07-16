@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XAnime Copy Button
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
+// @version      1.2.3
 // @description  try to take over the world!
 // @author       ddjrvs
 // @match        https://www.xanimeporn.com/*
@@ -49,7 +49,7 @@
     
     function fn_copyButton() {
       scrollDown();
-      setTimeout(clickDownload, 600);
+      setTimeout(clickDownload, 500);
       setTimeout(copyTitle, 1300);
       setTimeout(downloadLink, 1500);
     }
@@ -67,7 +67,7 @@
         // Set the button's style
         button.style.position = 'fixed';
         button.style.right = '20px';
-        button.style.top = '30px';
+        button.style.bottom = '50px';
         button.style.padding = '5px';
         
         // Set the button's onclick action
