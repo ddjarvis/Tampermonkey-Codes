@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XAnime Copy Button
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
+// @version      1.2.4
 // @description  try to take over the world!
 // @author       ddjrvs
 // @match        https://www.xanimeporn.com/*
