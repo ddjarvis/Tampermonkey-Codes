@@ -17,7 +17,20 @@
       const title = document.querySelectorAll('h1[itemprop="name"] span')[0].innerText;
       return title.replace(/(.+ Episode \d+) .*/,"$1");
     }
-    
+    function fileSafe(input)
+    {
+    	var proc = input, output;
+    	proc = proc.replace(/[^\p{L}\p{N}\p{P}\p{Z}]/gu, '');
+    	proc = proc.replace(/( +<+ +(?!.*>))|((?<!<.*) +>+ +)|(( *:+ +)|( +:+ *)|( *:+ *))/g," - ");
+    	proc = proc.replace(/([?*"]+)/g,"");
+    	proc = proc.replace(/(<+(?!.*>))|((?<!<.*)>+)|((?<!<.*)(?<=>.*)>)|([\/\\|]+)|(:+)/g," ");
+    	proc = proc.replace(/</g,"(").replace(/>/g,")");
+    	proc = proc.replace(/( {2,})/g," ").replaceAll('`',"'");
+    	output = proc.trim();
+    	return output;
+    }
+
+
     function copyText(inputString) {
     	var elem = document.createElement("textarea");
     	elem.value = inputString;
@@ -29,7 +42,7 @@
     
     function copyTitle() {
       const title = getTitle();
-      copyText(title);
+      copyText(fileSafe(title));
     }
     
     function clickDownload() {
